@@ -1,5 +1,10 @@
 import React from 'react'
+import AddFilm from "./containers/AddFilm"
 
-const App = () => <div>Hello, Redux</div>
+const App = () => (
+    <div>
+        <AddFilm />
+    </div>
+)
 
 export default App
