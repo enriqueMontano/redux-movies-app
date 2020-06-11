@@ -8,9 +8,14 @@ import rootReducer from './reducers'
 
 import './index.css'
 
+import { deleteFilm } from './actions/film.actions'
+
 const store = createStore(rootReducer)
 
 store.subscribe(() => console.log(store.getState()))
+
+//DISPATCH
+store.dispatch(deleteFilm(1))
 
 render(
     <Provider store={store}>

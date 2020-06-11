@@ -5,3 +5,8 @@ export const addFilm = title => ({
     id: nextFilmId++,
     title
 })
+
+export const deleteFilm = id => ({
+    type: "DELETE_FILM",
+    id
+})
