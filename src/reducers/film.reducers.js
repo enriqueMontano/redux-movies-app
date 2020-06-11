@@ -1,12 +1,19 @@
 const initialState = [
     {
         id: 1,
+        viewed: false,
         title: "8 1/2"
     },
     {
         id: 2,
+        viewed: false,
         title: "The Apartment"
-    }
+    },
+    {
+        id: 3,
+        viewed: false,
+        title: "La dolce vita"
+    },
 ]
 
 const films = (state = initialState, action) => {
@@ -24,6 +31,8 @@ const films = (state = initialState, action) => {
             state.splice(index, 1)
             return [...state]
         }
+        case "VIEWED_FILM":
+            return state.map(film => film.id === action.id ? { ...film, viewed: !film.complete } : film)
         default:
             return state
     }
