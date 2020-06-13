@@ -12,7 +12,7 @@ export const deleteFilm = id => ({
     id
 })
 
-export const viewedFilm = id => ({
-    type: "VIEWED_FILM",
+export const toggleViewedFilm = id => ({
+    type: "TOGGLE_VIEWED_FILM",
     id
 })

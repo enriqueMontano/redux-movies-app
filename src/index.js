@@ -9,7 +9,7 @@ import rootReducer from './reducers'
 import './index.css'
 
 // import { deleteFilm } from './actions/film.actions'
-import { viewedFilm } from './actions/film.actions'
+import { toggleViewedFilm } from './actions/film.actions'
 
 const store = createStore(rootReducer)
 
@@ -17,8 +17,8 @@ store.subscribe(() => console.log(store.getState()))
 
 //DISPATCH
 // store.dispatch(deleteFilm(1))
-store.dispatch(viewedFilm(1))
-store.dispatch(viewedFilm(2))
+store.dispatch(toggleViewedFilm(1))
+store.dispatch(toggleViewedFilm(2))
 
 render(
     <Provider store={store}>

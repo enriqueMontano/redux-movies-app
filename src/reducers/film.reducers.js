@@ -31,8 +31,8 @@ const films = (state = initialState, action) => {
             state.splice(index, 1)
             return [...state]
         }
-        case "VIEWED_FILM":
-            return state.map(film => film.id === action.id ? { ...film, viewed: !film.complete } : film)
+        case "TOGGLE_VIEWED_FILM":
+            return state.map(film => film.id === action.id ? { ...film, viewed: !film.viewed } : film)
         default:
             return state
     }
