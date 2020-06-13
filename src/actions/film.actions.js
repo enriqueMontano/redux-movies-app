@@ -1,10 +1,11 @@
-let nextFilmId = 0
+let nextFilmId = 4
 
-export const addFilm = title => ({
+export const addFilm = (title, genre) => ({
     type: "ADD_FILM",
     id: nextFilmId++,
     viewed: false,
-    title
+    title,
+    genre
 })
 
 export const deleteFilm = id => ({

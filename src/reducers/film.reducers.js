@@ -1,18 +1,21 @@
 const initialState = [
     {
         id: 1,
-        viewed: false,
-        title: "8 1/2"
+        viewed: true,
+        title: "Otto e mezzo",
+        genre: ["Drama", "Comedy"]
     },
     {
         id: 2,
-        viewed: false,
-        title: "The Apartment"
+        viewed: true,
+        title: "The Apartment",
+        genre: ["Comedy", "Romance", "Drama"]
     },
     {
         id: 3,
         viewed: false,
-        title: "La dolce vita"
+        title: "La dolce vita",
+        genre: ["Drama", "Comedy"]
     },
 ]
 
@@ -23,7 +26,9 @@ const films = (state = initialState, action) => {
                 ...state,
                 {
                     id: action.id,
-                    title: action.title
+                    viewed: false,
+                    title: action.title,
+                    genre: action.genre
                 }
             ]
         case "DELETE_FILM": {
