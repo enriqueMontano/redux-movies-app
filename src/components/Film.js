@@ -1,8 +1,11 @@
 import React from "react"
 
-const Film = ({ title, deleteFilm, toggleViewedFilm, viewed }) => (
+const Film = ({ title, genre, deleteFilm, toggleViewedFilm, viewed }) => (
     <li>
         <h3>{title}</h3>
+        <ul>
+            {genre != null && genre.map((cv, idx) => <li key={idx}>{cv}</li>)}
+        </ul>
         <div>
             <input type="checkbox" onClick={toggleViewedFilm} defaultChecked={viewed} />
             <label >Viewed</label>
