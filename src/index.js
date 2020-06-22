@@ -20,11 +20,11 @@ store.subscribe(() => console.log(store.getState()))
 // store.dispatch(toggleViewedFilm(2))
 store.dispatch(addFilm(
     "Der Name der Rose",
-    ["Mistery", "Drama"]
+    ["mistery", "drama"]
 ))
 store.dispatch(addFilm(
     "Trainspotting",
-    ["Drama"]
+    ["drama"]
 ))
 
 render(
