@@ -1,6 +1,6 @@
-.container {
+ul {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 7fr;
+  grid-template-rows: repeat(5, 25%);
   grid-gap: 3px;
 }

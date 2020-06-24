@@ -1,0 +1,6 @@
+li {
+  display: grid;
+  grid-template-columns: 30% 50% 20%;
+  grid-template-rows: 1fr;
+  grid-gap: 3px;
+}

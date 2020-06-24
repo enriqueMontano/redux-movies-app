@@ -1,13 +1,13 @@
 const initialState = [
   {
     id: 1,
-    viewed: true,
+    viewed: false,
     title: 'Otto e mezzo',
     genre: ['drama', 'comedy'],
   },
   {
     id: 2,
-    viewed: true,
+    viewed: false,
     title: 'The Apartment',
     genre: ['comedy', 'romance', 'drama'],
   },
@@ -37,7 +37,9 @@ const films = (state = initialState, action) => {
       return [...state]
     }
     case 'TOGGLE_VIEWED_FILM':
-      return state.map((film) => (film.id === action.id ? { ...film, viewed: !film.viewed } : film))
+      return state
+        .map((film) => (film.id === action.id ? { ...film, viewed: !film.viewed } : film))
+        .sort((a, b) => a.id - b.id)
     default:
       return state
   }
